@@ -2,8 +2,8 @@
 import axios from "axios";
 
 let config = {
-	baseURL: "http://127.0.0.1:3000/mock/19",
-	timeout: 2 * 1000,
+	baseURL: "http://152.136.185.210:7878/api/m5",
+	timeout: 5 * 1000,
 	// withCredentials: true, // Check cross-site Access-Control
 };
 

@@ -1,19 +1,16 @@
 import Vue from "vue";
-import "./plugins/axios";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import "./plugins/element.js";
-import {request} from "./plugins/axios";
-
+import "./request/axios";
+import "./plugins/vant.js";
 Vue.config.productionTip = false;
+
+Vue.prototype.$bus = new Vue(); //事件总线
 
 new Vue({
 	router,
 	store,
 	render: h => h(App),
 }).$mount("#app");
-
-request({url: "/home"}).then(data => {
-	console.log(data);
-});
